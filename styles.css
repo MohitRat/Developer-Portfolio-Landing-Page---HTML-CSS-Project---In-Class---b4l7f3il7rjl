@@ -1,65 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
     box-sizing: border-box;
+    padding: 0px;
     font-family: Poppins, sans-serif;
 }
 .container{
-    background-color: skyblue;
-    
+    background-color: #9BA4B5;
 }
 .hero-section{
     display: flex;
     width: 100%;
     position: relative;
 }
-.hero-section img{
-    width: 95%;
-    object-fit: cover;
-    margin-left: 2.5%;
-}
-.hero-section .About{
+.hero-section .head{
     position: absolute;
     width: 90%;
-    text-align: center;
     top: 7%;
+    left: 5%;
 }
-.hero-section .About h1{
-    color: white;
+.hero-section h1{
     font-size: 2rem;
-    opacity: 0.8;
-     font-family:'Times New Roman', Times, serif;
+    color: white;  
+    font-family:'Times New Roman', Times, serif;
 }
-.hero-section .About h1 span{
-    font-size: 1.5rem;
-    font-weight: 210;
-    opacity: 0.8;
-     font-family:'Times New Roman', Times, serif;
+.hero-section h1 span{
+    font-size: 1.5rem; 
+    font-weight: 200;
 }
-.hero-section .About h2{
+.hero-section h2{
+    font-family:'Times New Roman', Times, serif;
     font-size: 2rem;
-    color: white;
-    padding-right: 1.3%;
-    opacity: 0.8;
-     font-family:'Times New Roman', Times, serif;
+    color: white;  
 }
-.black-box{
+.hero-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.black{
     position: relative;
-    text-align: center;
-    color: white;
     background-color: black;
-    padding: 6px;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }
-.black-box h1{
+.black h1{
     font-size: 60px;
     font-weight: 500;
-     font-family:'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;
 }
-.black-box h1 span{
+.black span{
     font-size: 70px;
     font-weight: 500;
-     font-family:'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;
 }
 .card-container-section{
     position: relative;
@@ -72,92 +66,138 @@
     margin-top: 40px;
     flex-wrap: wrap;
 }
-.card-container{
+.card-container {
     background-color: #116A7B;
     color: white;
     max-width: 330px;
-    width: 480px;
+    height: 480px;
     position: relative;
     box-shadow: 0px 0px 40px 0px grey;
     border-radius: 10px;
+    
 }
 .card-container img{
     position: relative;
-    object-fit: cover;
     width: 100%;
-    height: 45%;
+    height: 50%;
+    object-fit: cover;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
 .content h3{
- padding-left: 10px;   
+    padding-left: 10px;
+    padding-top: 5px;
 }
 .content p{
     padding-left: 10px;
+    margin-bottom: -30px;
     padding-right: 5px;
 }
 .bottom-section{
     position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 80px;
-    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    margin: 80px 15px 0px;
+    padding-bottom: 60px;
+    gap: 50px;
 }
-.bottom-section .info1{
-    width: 45%;
-    background-color: green;
-    padding-bottom: 20px;
-    padding-left: 10px;
+.info1{
+    background-color: rgb(10, 23, 90);
     color: white;
+    padding: 20px;
+    grid-area: 1 / 1 / 2 / 2;
 }
-.bottom-section .info2{
-    width: 45%;
-    background-color: brown;
-    padding-bottom: 20px;
-    padding-left: 10px;
+.info2{
+    background-color: rgb(10, 23, 90);
     color: white;
+    padding: 20px;
+    grid-area: 1 / 2 / 2 / 3;
 }
 .info1 p{
     padding-top: 10px;
-    
 }
 .info2 p{
     padding-top: 10px;
 }
-.info1 h2{
-    padding-top: 10px;
+@media (max-width:1070px){
+    .card-container{
+        max-width: 250px;
+        height: 330px;
+    }
+    .content{
+        overflow: scroll;
+        height: 158px;
+    }
+    .content::-webkit-scrollbar {
+        display: none; 
+    }
 }
-.info2 h2{
-    padding-top: 10px;
-}
-@media only screen and (max-width:425px ) and (min-width:320px){
-    .hero-section .About h1{
-        font-size: 1rem;
+@media (max-width:840px){
+    .black{
+        font-size: 20px;
+        display: grid;
+        
     }
-    .hero-section .About h1 span{
-        font-size: 0.8rem;
+    .black h1{
+        font-size: 45px;
+        font-weight: 300;
     }
-    .hero-section .About h2{
-        font-size: 1rem;
-    }
-    .black-box h1{
-        font-size: 1rem;
-    }
-    .black-box h1 span{
-        font-size: 1.1rem;
+    .black span{
+        font-size: 50px;
+        font-weight: 300;
     }
     .bottom-section{
-        position: relative;
         display: flex;
         flex-wrap: wrap;
-        gap: 0;
+        gap: 0px;
     }
-    .bottom-section .info1{
-        width: 100%;
+    .info2{
+        background-color: rgb(13, 106, 13);
     }
-    .bottom-section .info2{
-        width: 100%;
+}
+@media (max-width:670px){
+    .hero-section .head{
+        position: absolute;
+        width: 70%;
+        top: 7%;
+        left: 15%;
+        text-align: center;
     }
-
+    .hero-section h1{
+        font-size: 1rem;
+        color: white;  
+    }
+    .hero-section h1 span{
+        font-size: .8rem; 
+        font-weight: 200;
+    }
+    .hero-section h2{
+        font-size: 1rem;
+        color: white;  
+    }
+    .black h1{
+        font-size: 30px;
+        font-weight: 200;
+    }
+    .black span{
+        font-size: 35px;
+        font-weight: 200;
+    }
+}
+@media (max-width:570px){
+    .card-container{
+        max-width: 350px;
+        height: 330px;
+    }
+}
+@media (max-width:470px){
+    
+    .black h1{
+        font-size: 20px;
+        font-weight: 200;
+    }
+    .black span{
+        font-size: 25px;
+        font-weight: 200;
+    }
 }
